@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MusFox — Reproduciendo</title>
+<link rel="icon" href="../img/logo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app-shell" id="mfShell">
+  <div id="mfShellSlot"></div>
+  <main class="main-content">
+    <section class="view active" id="playerView">
+      <div id="playerLoading">
+        <div class="skeleton-thumb" style="aspect-ratio:16/9;max-width:900px;"></div>
+      </div>
+      <div id="playerContent" style="display:none;">
+        <div class="player-layout">
+          <div>
+            <div class="player-video">
+              <iframe id="ytFrame" src="" title="Reproductor de YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="player-info">
+              <h1 class="player-title" id="pTitle"></h1>
+              <div class="player-meta">
+                <span id="pAuthor"></span>
+                <span class="dot"></span>
+                <span id="pViews"></span>
+                <span class="dot"></span>
+                <span id="pDate"></span>
+              </div>
+              <div class="player-actions">
+                <button class="btn-primary" id="addToListBtn">+ Añadir a lista</button>
+                <a class="btn-secondary" id="openYoutubeBtn" target="_blank" rel="noopener">Ver en YouTube</a>
+              </div>
+              <div class="player-desc" id="pDesc"></div>
+            </div>
+          </div>
+          <div>
+            <div class="section-head"><h2>También te puede gustar</h2></div>
+            <div class="related-list" id="relatedList"></div>
+          </div>
+        </div>
+      </div>
+      <div id="playerError" style="display:none;"></div>
+    </section>
+  </main>
+</div>
+
+<div class="overlay" id="mfOverlay"></div>
+<div class="modal" id="addModal">
+  <button class="modal-close" id="addModalClose">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <h3>Añadir a una lista</h3>
+  <div class="modal-list" id="modalPlaylistList"></div>
+  <a href="../lt/create.html" class="btn-secondary" style="width:100%;text-align:center;">+ Crear una lista nueva</a>
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/playlists.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/music.js"></script>
+</body>
+</html>
