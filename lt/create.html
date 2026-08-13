@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Lista — MusFox</title>
+<link rel="icon" href="../img/logo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app-shell" id="mfShell">
+  <div id="mfShellSlot"></div>
+  <main class="main-content">
+    <section class="view active">
+      <div class="page-header">
+        <div>
+          <h1>Crear nueva lista</h1>
+          <p>Organiza tus canciones favoritas en una lista personalizada</p>
+        </div>
+      </div>
+
+      <div class="section" style="max-width:480px;">
+        <form id="createForm">
+          <div class="field">
+            <label for="plName">Nombre de la lista</label>
+            <input type="text" id="plName" placeholder="Ej. Para el gimnasio" required maxlength="60">
+          </div>
+          <div class="field">
+            <label for="plDesc">Descripción (opcional)</label>
+            <textarea id="plDesc" rows="3" placeholder="Describe el ambiente o el propósito de tu lista" maxlength="160"></textarea>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:6px;">
+            <button type="submit" class="btn-primary">Crear lista</button>
+            <a href="list.html" class="btn-secondary" style="display:flex;align-items:center;">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/playlists.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/create.js"></script>
+</body>
+</html>
