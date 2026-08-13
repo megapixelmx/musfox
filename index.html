@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MusFox — Descubre música en tendencia</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell" id="mfShell">
+  <div id="mfShellSlot"></div>
+  <main class="main-content">
+
+    <section class="view active" id="view-inicio">
+      <div class="page-header">
+        <div>
+          <h1>Buenas, descubre tu próxima canción</h1>
+          <p>Lo más escuchado ahora mismo, directo desde YouTube</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <h2><span class="eq"><span></span><span></span><span></span></span> Tendencias musicales</h2>
+          <span class="tag">En vivo</span>
+        </div>
+        <div class="row-scroll" id="row-tendencias"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-head">
+          <h2>Más escuchadas</h2>
+        </div>
+        <div class="row-scroll" id="row-masescuchadas"></div>
+      </div>
+
+      <div id="genre-rows"></div>
+
+      <div class="section">
+        <div class="section-head">
+          <h2>Catálogo completo</h2>
+        </div>
+        <div class="grid" id="grid-catalogo"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-explorar">
+      <div class="page-header">
+        <div>
+          <h1>Explorar</h1>
+          <p>Busca cualquier canción, artista o álbum</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="grid" id="grid-explorar"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-generos">
+      <div class="page-header">
+        <div>
+          <h1>Géneros</h1>
+          <p>Explora la música por estilo</p>
+        </div>
+      </div>
+      <div class="genre-chip-row" id="genre-chips"></div>
+      <div class="grid" id="grid-generos"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/playlists.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
