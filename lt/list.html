@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Listas — MusFox</title>
+<link rel="icon" href="../img/logo.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app-shell" id="mfShell">
+  <div id="mfShellSlot"></div>
+  <main class="main-content">
+    <section class="view active">
+      <div class="page-header">
+        <div>
+          <h1>Mis Listas</h1>
+          <p>Tus listas de reproducción guardadas en este dispositivo</p>
+        </div>
+        <a href="create.html" class="btn-primary">+ Nueva lista</a>
+      </div>
+
+      <div id="playlistsWrap"></div>
+    </section>
+  </main>
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/playlists.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/list.js"></script>
+</body>
+</html>
